@@ -11,8 +11,8 @@ function packageJsonLocations(dirname) {
     .map(fname => path.dirname(fname));
 }
 
-function yarn(directoryName) {
-  let command = 'yarn';
+function npm(directoryName) {
+  let command = 'npm';
 
   if (argv.cmd)
     command += ' ' + argv.cmd;
@@ -23,7 +23,7 @@ function yarn(directoryName) {
   let result = shell.exec(command);
   shell.cd(directoryName);
 
-  console.log(clc.blueBright('Current yarn path: ' + directoryName + '/package.json...'));
+  console.log(clc.blueBright('Current npm path: ' + directoryName + '/package.json...'));
 
   return {
     directoryName: directoryName,
@@ -40,13 +40,13 @@ function filterRoot(directoryName) {
 if (require.main === module) {
   let exitCode = packageJsonLocations(process.cwd())
     .filter(argv.skipRoot ? filterRoot : filtered => filtered)
-    .map(yarn)
+    .map(npm)
     .reduce((code, result) =>result.exitCode > code ? result.exitCode : code, 0);
 
-  console.log(clc.green.bold('End of yarns'));
+  console.log(clc.green.bold('End of npms'));
   process.exit(exitCode);
 }
 
 module.exports = {
-  yarn: yarn
+  npm: npm
 };

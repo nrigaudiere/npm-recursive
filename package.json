@@ -1,29 +1,29 @@
 {
-  "name": "yarn-recursive",
+  "name": "npm-recursive",
   "version": "1.0.5",
-  "description": "Recursively run `yarn` in the current folder",
-  "main": "yarn-recursive.js",
+  "description": "Recursively run `npm` in the current folder",
+  "main": "npm-recursive.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nrigaudiere/yarn-recursive.git"
+    "url": "git+https://github.com/nrigaudiere/npm-recursive.git"
   },
   "bin": {
-    "yarn-recursive": "yarn-recursive.js"
+    "npm-recursive": "npm-recursive.js"
   },
   "keywords": [
-    "yarn",
+    "npm",
     "recursive",
     "install"
   ],
   "author": "Nicolas Rigaudière",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nrigaudiere/yarn-recursive/issues"
+    "url": "https://github.com/nrigaudiere/npm-recursive/issues"
   },
-  "homepage": "https://github.com/nrigaudiere/yarn-recursive#readme",
+  "homepage": "https://github.com/nrigaudiere/npm-recursive#readme",
   "dependencies": {
     "cli-color": "^1.2.0",
     "shelljs": "^0.7.8",
