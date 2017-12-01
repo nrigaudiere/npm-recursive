@@ -1,6 +1,6 @@
 {
   "name": "npm-recursive",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "Recursively run `npm` in the current folder",
   "main": "npm-recursive.js",
   "scripts": {
